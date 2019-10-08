@@ -1,8 +1,9 @@
-# Generate 0x Contract Wrapper for Registry Whitelist
+# Registry Whitelist Contract Wrapper
+Generates a 0x Contract Wrapper for the Microsponsors Registry Whitelist contract.
 
 Install
 ```
-npm i @0x/abi-gen -g
+npm install @0x/abi-gen -g
 ```
 
 Build
