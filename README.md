@@ -10,6 +10,7 @@ npm install @0x/abi-gen -g
 ```
 
 ## Build
+Assumes you are in the directory above this one, with this repo and the `registry-contract` repo directly below:
 ```
 abi-gen --abis 'registry-contract/build/contracts/Whitelist.json' --out 'registry-contract-wrapper/build/' --partials 'registry-contract-wrapper/templates/partials/**/*.handlebars' --template 'registry-contract-wrapper/templates/contract.handlebars'
 ```
