@@ -1887,7 +1887,7 @@ export class WhitelistContract extends BaseContract {
             signature: string,
             callData: Partial<CallData> = {},
             defaultBlock?: BlockParam,
-        ): Promise<boolean
+        ): Promise<string
         > {
             assert.isString('hash', hash);
             assert.isString('signerAddress', signerAddress);
@@ -1919,7 +1919,7 @@ export class WhitelistContract extends BaseContract {
             BaseContract._throwIfRevertWithReasonCallResult(rawCallResult);
             const abiEncoder = self._lookupAbiEncoder('isValidSignature(bytes32,address,bytes)');
             // tslint:disable boolean-naming
-            const result = abiEncoder.strictDecodeReturnValue<boolean
+            const result = abiEncoder.strictDecodeReturnValue<string
         >(rawCallResult);
             // tslint:enable boolean-naming
             return result;
@@ -1968,12 +1968,12 @@ export class WhitelistContract extends BaseContract {
          */
         getABIDecodedReturnData(
             returnData: string
-        ): (boolean
+        ): (string
         ) {
             const self = this as any as WhitelistContract;
             const abiEncoder = self._lookupAbiEncoder('isValidSignature(bytes32,address,bytes)');
             // tslint:disable boolean-naming
-            const abiDecodedReturnData = abiEncoder.strictDecodeReturnValue<boolean
+            const abiDecodedReturnData = abiEncoder.strictDecodeReturnValue<string
         >(returnData);
             return abiDecodedReturnData;
         },
@@ -3027,8 +3027,8 @@ public static async deployFrom0xArtifactAsync(
                 name: 'isValidSignature',
                 outputs: [
                     {
-                        name: 'isValid',
-                        type: 'bool',
+                        name: '',
+                        type: 'bytes4',
                     },
                 ],
                 payable: false,
