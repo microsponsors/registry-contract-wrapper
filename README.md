@@ -1,3 +1,5 @@
+### :warning: :x: DEPRECATED - DO NOT USE :x: :warning:
+
 # Registry Whitelist Contract Wrapper
 Generates a 0x Contract Wrapper for the Microsponsors Registry Whitelist contract.
 
